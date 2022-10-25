@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eric <eric@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 15:09:14 by eric              #+#    #+#             */
-/*   Updated: 2022/10/15 15:44:59 by eric             ###   ########.fr       */
+/*   Updated: 2022/10/25 15:55:06 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*uchar_s1;
-	const unsigned char *uchar_s2;
+	const unsigned char	*uchar_s2;
 	size_t				i;
 
 	uchar_s1 = (const unsigned char *)s1;
