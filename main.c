@@ -6,7 +6,7 @@
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:01:27 by eric              #+#    #+#             */
-/*   Updated: 2022/10/26 12:59:59 by eholzer          ###   ########.fr       */
+/*   Updated: 2022/10/26 15:31:11 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 int	main(void)
 {
-	char	s1[] = "Hello Eric my friend";
-	char	s2[] = "Ericc";
+	/* char	s1[] = "Hello Eric my friend";
+	char	s2[] = "my";
 	
-	printf("%s", ft_strnstr(s1, s2, 100));
+	printf("%s", ft_strnstr(s1, s2, 100)); */
+	printf("%d", ft_atoi("      \n-123456789"));
 }

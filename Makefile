@@ -6,7 +6,7 @@
 #    By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 14:27:05 by eholzer           #+#    #+#              #
-#    Updated: 2022/10/26 13:00:09 by eholzer          ###   ########.fr        #
+#    Updated: 2022/10/26 16:43:07 by eholzer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ SRCS 	= 	main.c \
 			ft_strchr.c \
 			ft_strrchr.c \
 			ft_strncmp.c \
-			ft_strnstr.c
+			ft_strnstr.c \
+			ft_atoi.c
 
 OBJS	= ${SRCS:.c=.o}
 
@@ -36,7 +37,11 @@ NAME	= libft.a
 
 CC		= gcc
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra
+
+LIBC	= ar rc
+
+LIBR	= ranlib
 
 .c.o:
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
