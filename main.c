@@ -6,17 +6,13 @@
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:01:27 by eric              #+#    #+#             */
-/*   Updated: 2022/10/26 15:31:11 by eholzer          ###   ########.fr       */
+/*   Updated: 2022/10/26 18:06:24 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+/* int	main(void)
 {
-	/* char	s1[] = "Hello Eric my friend";
-	char	s2[] = "my";
-	
-	printf("%s", ft_strnstr(s1, s2, 100)); */
 	printf("%d", ft_atoi("      \n-123456789"));
-}
+} */

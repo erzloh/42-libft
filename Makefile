@@ -6,7 +6,7 @@
 #    By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 14:27:05 by eholzer           #+#    #+#              #
-#    Updated: 2022/10/26 16:43:07 by eholzer          ###   ########.fr        #
+#    Updated: 2022/10/26 16:58:17 by eholzer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ LIBR	= ranlib
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS}
-			${CC} ${CFLAGS} -o ${NAME} ${OBJS}
+			${LIBC} ${NAME} ${OBJS}
+			${LIBR} ${NAME}
 
 all:		${NAME}
 
@@ -60,3 +61,6 @@ fclean:		clean
 re:			fclean all
 
 .PHONY:		all clean fclean re
+
+compile:	${NAME}
+			${CC} ${CFLAGS} -L. -lft
