@@ -6,7 +6,7 @@
 #    By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 14:27:05 by eholzer           #+#    #+#              #
-#    Updated: 2022/10/25 15:46:15 by eholzer          ###   ########.fr        #
+#    Updated: 2022/10/26 13:00:09 by eholzer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ SRCS 	= 	main.c \
 			ft_tolower.c \
 			ft_strchr.c \
 			ft_strrchr.c \
+			ft_strncmp.c \
+			ft_strnstr.c
 
 OBJS	= ${SRCS:.c=.o}
 
