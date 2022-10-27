@@ -6,13 +6,14 @@
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:01:27 by eric              #+#    #+#             */
-/*   Updated: 2022/10/26 18:06:24 by eholzer          ###   ########.fr       */
+/*   Updated: 2022/10/27 15:30:30 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-/* int	main(void)
+int	main(void)
 {
-	printf("%d", ft_atoi("      \n-123456789"));
-} */
+	printf("%d", ft_atoi("+1234"));
+}

@@ -6,12 +6,11 @@
 #    By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 14:27:05 by eholzer           #+#    #+#              #
-#    Updated: 2022/10/26 16:58:17 by eholzer          ###   ########.fr        #
+#    Updated: 2022/10/27 14:59:13 by eholzer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS 	= 	main.c \
-			ft_isalpha.c \
+SRCS 	=	ft_isalpha.c \
 	 		ft_isdigit.c \
 			ft_isalnum.c \
 			ft_isascii.c \
@@ -28,6 +27,8 @@ SRCS 	= 	main.c \
 			ft_strchr.c \
 			ft_strrchr.c \
 			ft_strncmp.c \
+			ft_memchr.c \
+			ft_memcmp.c \
 			ft_strnstr.c \
 			ft_atoi.c
 
@@ -62,5 +63,5 @@ re:			fclean all
 
 .PHONY:		all clean fclean re
 
-compile:	${NAME}
-			${CC} ${CFLAGS} -L. -lft
+main:		${NAME}
+			${CC} ${CFLAGS} main.c ${NAME}

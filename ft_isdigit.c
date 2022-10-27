@@ -6,7 +6,7 @@
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:21:43 by eric              #+#    #+#             */
-/*   Updated: 2022/10/25 15:55:01 by eholzer          ###   ########.fr       */
+/*   Updated: 2022/10/27 15:46:49 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	unsigned char	uchar_c;
-
-	uchar_c = (unsigned char)c;
-	if (uchar_c >= '0' && uchar_c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

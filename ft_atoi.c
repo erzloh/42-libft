@@ -6,7 +6,7 @@
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 14:39:01 by eholzer           #+#    #+#             */
-/*   Updated: 2022/10/26 15:48:12 by eholzer          ###   ########.fr       */
+/*   Updated: 2022/10/27 15:38:16 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,24 +24,35 @@ static int	power(int nb, int power)
 	return (res);
 }
 
+static const char	*skip_to_number(const char *str, int *ptr_sign)
+{
+	while (*str == ' ' || *str == '\t' || *str == '\n'
+		|| *str == '\v' || *str == '\f' || *str == '\r')
+		str++;
+	if (*str == '-')
+	{
+		*ptr_sign = -1;
+		str++;
+	}
+	else if (*str == '+')
+		str++;
+	return (str);
+}
+
 int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
+	int	*ptr_sign;
 	int	nb_len;
 	int	res;
 
 	i = 0;
 	sign = 1;
+	ptr_sign = &sign;
 	nb_len = 0;
 	res = 0;
-	while (*str == ' ' || *str == '\t' || *str == '\n')
-		str++;
-	if (*str == '-')
-	{
-		sign = -1;
-		str++;
-	}
+	str = skip_to_number(str, ptr_sign);
 	while (str[i] >= '0' && str[i++] <= '9')
 		nb_len++;
 	i = 0;

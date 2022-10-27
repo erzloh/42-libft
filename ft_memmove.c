@@ -6,7 +6,7 @@
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:58:30 by eric              #+#    #+#             */
-/*   Updated: 2022/10/25 15:55:10 by eholzer          ###   ########.fr       */
+/*   Updated: 2022/10/27 17:13:16 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (!tmp_src)
 		return (NULL);
+	if (!dst && !src)
+		return (0);
 	ft_memcpy(tmp_src, uchar_src, len);
 	while (i < len)
 	{
