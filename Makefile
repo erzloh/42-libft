@@ -6,7 +6,7 @@
 #    By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 14:27:05 by eholzer           #+#    #+#              #
-#    Updated: 2022/10/27 14:59:13 by eholzer          ###   ########.fr        #
+#    Updated: 2022/10/28 12:12:43 by eholzer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,9 @@ SRCS 	=	ft_isalpha.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_strnstr.c \
-			ft_atoi.c
+			ft_atoi.c \
+			ft_calloc.c \
+			ft_strdup.c
 
 OBJS	= ${SRCS:.c=.o}
 
