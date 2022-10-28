@@ -6,7 +6,7 @@
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:58:30 by eric              #+#    #+#             */
-/*   Updated: 2022/10/27 17:13:16 by eholzer          ###   ########.fr       */
+/*   Updated: 2022/10/28 10:22:33 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,25 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*uchar_dst;
 	const unsigned char	*uchar_src;
-	unsigned char		*tmp_src;
 	size_t				i;
 
 	uchar_dst = (unsigned char *)dst;
 	uchar_src = (const unsigned char *)src;
-	tmp_src = malloc(sizeof(char) * (len + 1));
 	i = 0;
-	if (!tmp_src)
-		return (NULL);
 	if (!dst && !src)
 		return (0);
-	ft_memcpy(tmp_src, uchar_src, len);
-	while (i < len)
+	if (uchar_dst > uchar_src)
 	{
-		uchar_dst[i] = tmp_src[i];
-		i++;
+		while (len--)
+			uchar_dst[len] = uchar_src[len];
 	}
-	free(tmp_src);
+	else
+	{
+		while (i < len)
+		{
+			uchar_dst[i] = uchar_src[i];
+			i++;
+		}
+	}
 	return (dst);
 }
