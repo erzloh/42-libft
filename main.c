@@ -6,7 +6,7 @@
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:01:27 by eric              #+#    #+#             */
-/*   Updated: 2022/10/28 16:01:35 by eholzer          ###   ########.fr       */
+/*   Updated: 2022/10/29 15:19:37 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 
 int	main(void)
 {
-	char	*str = NULL;
-	printf("%zu", ft_strlen(str));
+	char	s[] = "bonjour-monsieur-le-kiwi";
 }
