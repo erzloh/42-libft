@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eric <eric@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 18:52:28 by eric              #+#    #+#             */
-/*   Updated: 2022/10/30 21:43:02 by eric             ###   ########.fr       */
+/*   Updated: 2022/10/31 13:18:52 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,33 +44,37 @@ static int	power(int n, int power)
 	return (res);
 }
 
-int	abs(int n)
+static char	*is_exception(int n, char *str)
 {
-	if (n < 0)
-		return (n * -1);
-	return (n);
-}
-
-void	if_int_min(int n, char *str)
-{
-	if (n == (__INT_MAX__ * - 1) - 1)
+	if (n == 0)
 	{
-		ft_memcmp(str, "");
+		str = malloc(sizeof(char) * 2);
+		*str = '0';
+		*(str + 1) = '\0';
+		return (str);
 	}
+	if (n == -2147483648)
+	{
+		str = malloc(sizeof(char) * 12);
+		ft_memcpy(str, "-2147483648", 11);
+		str[11] = '\0';
+		return (str);
+	}
+	return (NULL);
 }
 
-char	*ft_itoa(int n)
+char	*get_str_from_int(char *str, int n, int len)
 {
-	int		len;
 	int		i;
-	char	*str;
 	int		u;
 	int		is_negative;
 
-	len = n_len(n);
 	is_negative = 0;
 	if (n < 0)
+	{
 		is_negative = 1;
+		n *= -1;
+	}
 	i = 0;
 	str = malloc(sizeof(char) * (len + is_negative + 1));
 	if (!str)
@@ -79,18 +83,25 @@ char	*ft_itoa(int n)
 		str[i++] = '-';
 	while (i < len + is_negative)
 	{
-		u = abs(n) / power(10, len - 1 - i + is_negative);
+		u = n / power(10, len - 1 - i + is_negative);
 		str[i] = '0' + u;
-		n = abs(n) - u * power(10, len - 1 - i + is_negative);
+		n = n - u * power(10, len - 1 - i + is_negative);
 		i++;
 	}
 	str[i] = '\0';
 	return (str);
 }
 
-int	main(void)
+char	*ft_itoa(int n)
 {
-	int	n = -1234;
-	printf("%d\n", n_len(n));
-	printf("%s", ft_itoa(n));
+	int		len;
+	char	*str;
+
+	str = NULL;
+	str = is_exception(n, str);
+	if (str)
+		return (str);
+	len = n_len(n);
+	str = get_str_from_int(str, n, len);
+	return (str);
 }
