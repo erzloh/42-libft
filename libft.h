@@ -6,7 +6,11 @@
 /*   By: eric <eric@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:29:11 by eric              #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/10/30 12:33:58 by eric             ###   ########.fr       */
+=======
+/*   Updated: 2022/10/29 15:17:15 by eholzer          ###   ########.fr       */
+>>>>>>> 1bfff6588a03cc4b4ef40949ce287d0342ffc04d
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +45,10 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+<<<<<<< HEAD
+=======
+char	*ft_strtrim(char const *s1, char const *set);
+>>>>>>> 1bfff6588a03cc4b4ef40949ce287d0342ffc04d
 char	**ft_split(char const *s, char c);
 
 #endif
