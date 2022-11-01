@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/28 17:01:27 by eric              #+#    #+#             */
-/*   Updated: 2022/11/01 09:59:09 by eholzer          ###   ########.fr       */
+/*   Created: 2022/11/01 09:45:10 by eholzer           #+#    #+#             */
+/*   Updated: 2022/11/01 09:51:27 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-int	main(void)
+void	ft_putendl_fd(char *s, int fd)
 {
-	int	n;
-
-	n = 1234;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

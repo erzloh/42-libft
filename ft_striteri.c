@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/28 17:01:27 by eric              #+#    #+#             */
-/*   Updated: 2022/11/01 09:59:09 by eholzer          ###   ########.fr       */
+/*   Created: 2022/11/01 09:00:35 by eholzer           #+#    #+#             */
+/*   Updated: 2022/11/01 09:06:02 by eholzer          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
-int	main(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	n;
+	int	i;
 
-	n = 1234;
+	i = 0;
+	while (s[i])
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
 }
