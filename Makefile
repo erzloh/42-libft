@@ -6,7 +6,7 @@
 #    By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 14:27:05 by eholzer           #+#    #+#              #
-#    Updated: 2022/11/01 10:24:49 by eholzer          ###   ########.fr        #
+#    Updated: 2022/11/01 16:30:01 by eholzer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,11 @@ SRCS 	=	ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
+SRCS_B	= ft_lstnew.c
+
 OBJS	= ${SRCS:.c=.o}
+
+OBJS_B	= ${SRCS_B:.c=.o}
 
 NAME	= libft.a
 
@@ -74,7 +78,8 @@ fclean:		clean
 
 re:			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus
 
-main:		${NAME}
-			${CC} ${CFLAGS} main.c ${NAME}
+bonus:		${OBJS} ${OBJS_B}
+			${LIBC} ${NAME} ${OBJS} ${OBJS_B}
+			${LIBR} ${NAME}
