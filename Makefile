@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: eric <eric@student.42.fr>                  +#+  +:+       +#+         #
+#    By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 14:27:05 by eholzer           #+#    #+#              #
-#    Updated: 2022/11/02 15:56:36 by eric             ###   ########.fr        #
+#    Updated: 2022/11/03 12:05:59 by eholzer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,15 +45,15 @@ SRCS 	=	ft_isalpha.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c
 
-SRCS_B	= 	ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c
+SRCS_B	= 	ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c
 
 OBJS	= ${SRCS:.c=.o}
 
