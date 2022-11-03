@@ -6,7 +6,7 @@
 #    By: eholzer <eholzer@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 14:27:05 by eholzer           #+#    #+#              #
-#    Updated: 2022/11/03 12:05:59 by eholzer          ###   ########.fr        #
+#    Updated: 2022/11/03 14:34:19 by eholzer          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ ${NAME}:	${OBJS}
 all:		${NAME}
 
 clean:
-			rm -f ${OBJS}
+			rm -f ${OBJS} ${OBJS_B}
 
 fclean:		clean
 			rm -f ${NAME}
