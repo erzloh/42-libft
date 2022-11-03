@@ -1,2 +1,2 @@
-# 42
-This is the repository of my work at 42.
+# Libft
+This project consists of coding a library of basic C functions for use in other projects of the 42 School cursus.
